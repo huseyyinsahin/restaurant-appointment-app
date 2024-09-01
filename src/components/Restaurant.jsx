@@ -12,7 +12,7 @@ function Restaurant({ restaurantData, handleAddAppointment }) {
   const handleClose = () => setShow(false);
   return (
     <Container>
-      <Row className="my-5">
+      <Row className="my-5 text-center">
         {restaurantData.map(({ id, name, img }) => {
           return (
             <Col className="my-2" xs={12} sm={6} md={4} lg={4} key={id}>
