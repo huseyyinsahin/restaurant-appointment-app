@@ -1,0 +1,54 @@
+.rest-img {
+  width: 350px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.navbar {
+  font-size: 2rem;
+}
+
+.appointment {
+  position: relative;
+}
+
+.completedDiv {
+  position: absolute;
+  left: 10%;
+  border: 5px solid red;
+  color: red;
+  width: 400px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.487);
+}
+
+@media (max-width: 900px) {
+  .navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    font-size: 2.8rem;
+  }
+  
+  .navbar .navbar-brand,
+  .navbar .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .completedDiv {
+    left: 0%;
+    width: 500px;
+    font-size: 0.9rem;
+  }
+}
