@@ -24,6 +24,7 @@ function RestaurantModal({
       people: people,
     };
     handleAddAppointment(newAppointment);
+    handleClose();
   };
 
   return (
@@ -61,7 +62,6 @@ function RestaurantModal({
                 className="me-2 btn-success"
                 variant="secondary"
                 type="submit"
-                onClick={handleClose}
               >
                 Submit
               </Button>
