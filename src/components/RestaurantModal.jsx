@@ -79,6 +79,7 @@ function RestaurantModal({
                 className="btn-danger"
                 variant="primary"
                 onClick={handleModalClose}
+                type="button"
               >
                 Close
               </Button>
