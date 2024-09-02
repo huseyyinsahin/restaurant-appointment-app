@@ -24,12 +24,19 @@ function RestaurantModal({
       people: people,
     };
     handleAddAppointment(newAppointment);
+    handleModalClose();
+  };
+
+  const handleModalClose = () => {
     handleClose();
+    setNameSurname("");
+    setDate("");
+    setPeople("");
   };
 
   return (
     <div>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleModalClose}>
         <Modal.Header closeButton>
           <Modal.Title>Appointment For Restaurant {restaurant} </Modal.Title>
         </Modal.Header>
@@ -42,6 +49,7 @@ function RestaurantModal({
                 placeholder="Enter name & surname"
                 required
                 onChange={(e) => setNameSurname(e.target.value)}
+                value={nameSurname}
               />
               <Form.Label className="mt-2">How many people are you?</Form.Label>
               <Form.Control
@@ -49,12 +57,14 @@ function RestaurantModal({
                 placeholder="Enter"
                 required
                 onChange={(e) => setPeople(e.target.value)}
+                value={people}
               />
               <Form.Label className="mt-2">Day & Time</Form.Label>
               <Form.Control
                 type="datetime-local"
                 required
                 onChange={(e) => setDate(e.target.value)}
+                value={date}
               />
             </Form.Group>
             <div className="text-center mt-3">
@@ -68,7 +78,7 @@ function RestaurantModal({
               <Button
                 className="btn-danger"
                 variant="primary"
-                onClick={handleClose}
+                onClick={handleModalClose}
               >
                 Close
               </Button>
