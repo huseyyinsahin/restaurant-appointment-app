@@ -5,11 +5,14 @@ import { useState } from "react";
 function Restaurant({ restaurantData, handleAddAppointment }) {
   const [show, setShow] = useState(false);
   const [restaurant, setRestaurant] = useState("");
+
   const handleShow = (name) => {
     setShow(true);
     setRestaurant(name);
   };
+
   const handleClose = () => setShow(false);
+
   return (
     <Container>
       <Row className="my-5 text-center">

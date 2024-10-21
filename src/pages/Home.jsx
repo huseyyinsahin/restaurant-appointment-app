@@ -21,10 +21,12 @@ function Home() {
   const handleAddAppointment = (newAppointment) => {
     setAppointments([...appointments, newAppointment]);
   };
+  
   const handleDelete = (id) => {
     const filteredAppointment = appointments.filter((item) => item.id != id);
     setAppointments(filteredAppointment);
   };
+
   const handleDoubleClick = (id) => {
     const filteredCompleted = appointments.map((item) =>
       item.id == id ? { ...item, completed: !item.completed } : item
